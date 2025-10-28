@@ -2,7 +2,8 @@ import java.util.Scanner;
 
 public class TextAdventure {
     public static void main(String[] args) {
-System.out.println("    _    ____   ____ ___ ___      _         _        _             _     _           \n" +
+System.out.println(
+        "    _    ____   ____ ___ ___      _         _        _             _     _           \n" +
         "   / \\  / ___| / ___|_ _|_ _|    / \\   _ __| |_     / \\   _ __ ___| |__ (_)_   _____ \n" +
         "  / _ \\ \\___ \\| |    | | | |    / _ \\ | '__| __|   / _ \\ | '__/ __| '_ \\| \\ \\ / / _ \\\n" +
         " / ___ \\ ___) | |___ | | | |   / ___ \\| |  | |_   / ___ \\| | | (__| | | | |\\ V /  __/\n" +
