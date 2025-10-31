@@ -9,7 +9,7 @@ public class TextAdventure
         boolean run = true;
         while(run)
         {
-        // need to put title here ASCII of name
+        // title
         System.out.println(
                 "███████╗ ██████╗ ██████╗ ███████╗███████╗████████╗                           \n" +
                 "██╔════╝██╔═══██╗██╔══██╗██╔════╝██╔════╝╚══██╔══╝                           \n" +
@@ -28,7 +28,7 @@ public class TextAdventure
         // scene 1 getting out of the forest
         System.out.println("\nYour wake up in the middle of a forest with no memory of who you are or where you are.");
         System.out.println("You decide to travel in a random direction untile you reach something or you parish.");
-        System.out.println("Your travel for a while until you find a path. The path branches multiple tiles so chose which direction to travel.");
+        System.out.println("Your travel for a while until you find a path. The path branches multiple times so chose which direction to travel.");
         System.out.println("\nCapitalisation matters (left-L right-R straight-S)");
 
         // for loop to see if you find the secret ending to get secret ending do L three times
@@ -39,14 +39,28 @@ public class TextAdventure
             secret_Exit_ending += string_For_Secret_Ending.charAt(0);
         }
 
-        if (secret_Exit_ending == 228)
+        if (secret_Exit_ending == 228 || secret_Exit_ending == 324)
         {
-            System.out.println("secret ending ");
-            System.out.print("Do you want to play again (Y or N): ");
-            String runAgain = sc.nextLine();
-            if (runAgain.equalsIgnoreCase("N"))
+            System.out.println("\nAs you find a clearing in the woods you approach a farm.");
+            System.out.println("When you go up to the farm a woman exits the house and asks what you are and what you are doing.");
+            System.out.println("You say you don't know who you are and all you want is some food for your hunger and maybe some shelter.");
+            System.out.println("She takes you inside his house and gives you food.");
+            System.out.println("Her husband just died and she doesn't have any children.");
+            System.out.println("She asks for you to help around the farm until you are ready to leave.");
+            System.out.println("As you go through life you never find a reason to leave and go old and die on the farm.");
+
+            System.out.print("\nDo you want to play again (Y or N): ");
+            boolean runRun = true;
+            while (runRun)
             {
-                run = false;
+                String runAgain = sc.nextLine();
+                if (runAgain.equalsIgnoreCase("N"))
+                {
+                    run = false;
+                    runRun = false
+                } else if (runAgain.equalsIgnoreCase("Y")) {
+
+                }
             }
         }
         else {
