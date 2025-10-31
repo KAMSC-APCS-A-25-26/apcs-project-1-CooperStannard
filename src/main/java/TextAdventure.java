@@ -7,6 +7,8 @@ public class TextAdventure
         Scanner sc = new Scanner(System.in);
         Random rand = new Random();
         boolean run = true;
+        boolean isPacifist = false;
+
         while(run)
         {
             // title
@@ -44,7 +46,28 @@ public class TextAdventure
             }
 
             if (secret_Exit_ending == 228 || secret_Exit_ending == 324) {
-                System.out.println("\nAs you find a clearing in the woods you approach a farm.");
+                System.out.println
+                        ("\n                           (   )\n" +
+                        "                          (    )\n" +
+                        "                           (    )\n" +
+                        "                          (    )\n" +
+                        "                            )  )\n" +
+                        "                           (  (                  /\\\n" +
+                        "                            (_)                 /  \\  /\\\n" +
+                        "                    ________[_]________      /\\/    \\/  \\\n" +
+                        "           /\\      /\\        ______    \\    /   /\\/\\  /\\/\\\n" +
+                        "          /  \\    //_\\       \\    /\\    \\  /\\/\\/    \\/    \\\n" +
+                        "   /\\    / /\\/\\  //___\\       \\__/  \\    \\/\n" +
+                        "  /  \\  /\\/    \\//_____\\       \\ |[]|     \\\n" +
+                        " /\\/\\/\\/       //_______\\       \\|__|      \\\n" +
+                        "/      \\      /XXXXXXXXXX\\                  \\\n" +
+                        "        \\    /_I_II  I__I_\\__________________\\\n" +
+                        "               I_I|  I__I_____[]_|_[]_____I\n" +
+                        "               I_II  I__I_____[]_|_[]_____I\n" +
+                        "               I II__I  I     XXXXXXX     I\n" +
+                        "            ~~~~~\"   \"~~~~~~~~~~~~~~~~~~~~~~~~\n");
+
+                System.out.println("As you find a clearing in the woods you approach a farm.");
                 System.out.println("When you go up to the farm a woman exits the house and asks what you are and what you are doing.");
                 System.out.println("You say you don't know who you are and all you want is some food for your hunger and maybe some shelter.");
                 System.out.println("She takes you inside his house and gives you food.");
@@ -130,7 +153,6 @@ public class TextAdventure
                 boolean runRun2 = true;
                 while (runRun2) {
                     String fightORpacifist = sc.nextLine();
-                    boolean isPacifist;
                     if (fightORpacifist.equalsIgnoreCase("R")) {
                         isPacifist = true;
 
@@ -150,7 +172,6 @@ public class TextAdventure
                         }
                         runRun2 = false;
                     } else if (fightORpacifist.equalsIgnoreCase("F")) {
-                        isPacifist = false;
                         System.out.println("\nYou have decided to fight the wolf it is either him or me and I want to live.");
                         System.out.println("\nDo you chose to block or attack the wolf (if incorrect input you do nothing)");
                         System.out.println("You gain 2 Hp each round through passive recovery and deal between 1-5 damage");
@@ -182,7 +203,8 @@ public class TextAdventure
                 if (wolfhp <= 0) {
                     System.out.println("You have killed the wolf");
                 }
-                if (hp <= 0) {
+                if (hp <= 0)
+                {
                     System.out.println("\nYou have died after the wolf ate you");
                     System.out.print("Do you want to play again (Y or N): ");
 
@@ -288,13 +310,58 @@ public class TextAdventure
                                 int getMugged = rand.nextInt(3);
                                 if (getMugged == 1)
                                 {
-                                    System.out.println("You are being mugged.");
+                                    System.out.println("\nYou are being mugged.");
+                                    // if you chose to be a pacifist you get this route
                                     if (isPacifist){
-
+                                        System.out.println("you decide to run away from the mugger like you did the wolf");
+                                        int chanceMugged = rand.nextInt(2);
+                                        if (chanceMugged == 1){
+                                            System.out.println("You did not get away and you lost 10 health and 20 coins");
+                                            hp -= 10;
+                                            coins -= 20;
+                                            if (coins <0){
+                                                coins = 0;
+                                            }
+                                        } else {
+                                            System.out.println("You got away from the mugger without a scratch.");
+                                        }
                                     }
+                                    // if you didn't choose to be a pacifist you get this route
+                                    else{
+                                        System.out.println("You decide to attack the mugger.");
+                                        int chanceMugged = rand.nextInt(3);
+                                        if (chanceMugged == 1)
+                                        {
+                                            int muggerHp = 15;
+                                            System.out.println("\nDo you chose to block or attack the Mugger (if incorrect input you do nothing)");
+                                            System.out.println("You gain 2 Hp each round through passive recovery and deal between 1-5 damage");
+                                            System.out.println("The mugger does 0-10 damage, if you block it heals 4 hp.");
 
+                                            while (hp > 0 && muggerHp > 0)
+                                            {
+                                                System.out.println("\nYour Hp is: " + hp + " The mugger's is " + muggerHp);
+                                                System.out.print("Attack-A or Block-B: ");
+                                                String action = sc.nextLine();
+                                                if (action.equalsIgnoreCase("cheat")) {
+                                                    muggerHp = 0;
+                                                } else if (action.equalsIgnoreCase("A")) {
+                                                    int attack = rand.nextInt(5) + 1;
+                                                    muggerHp -= attack;
+                                                } else if (action.equalsIgnoreCase("B")) {
+                                                    hp += 4;
+                                                }
+                                                int damage = rand.nextInt(11);
+                                                hp -= damage;
+                                                hp += 2;
+                                            }
+                                            if (muggerHp <=0){
+                                                System.out.println("You have defeated the mugger and get to keep your gold");
+                                            }
 
-
+                                        } else {
+                                            System.out.println("Because you tried to attack the mugger he got scared and ran away.");
+                                        }
+                                    }
                                 }
 
                                 else{
@@ -342,6 +409,32 @@ public class TextAdventure
                                 System.out.println("\nYou have gained 100 coins.");
                                 break;
 
+                        }
+                        if (hp <= 0)
+                        {
+                            System.out.println("\nYou have died in the town");
+                            System.out.print("Do you want to play again (Y or N): ");
+
+                            boolean runRun7 = true;
+                            while (runRun7)
+                            {
+                                String runAgain2 = sc.nextLine();
+
+                                if (runAgain2.equalsIgnoreCase("N")) {
+                                    run = false;
+                                    runRun7 =false;
+                                    runRun4 = false;
+                                }
+                                else if (runAgain2.equalsIgnoreCase("Y"))
+                                {
+                                    runRun7 = false;
+                                    runRun4 = false;
+                                }
+                                else
+                                {
+                                    System.out.print("incorrect input type again: ");
+                                }
+                            }
                         }
                     }
 
