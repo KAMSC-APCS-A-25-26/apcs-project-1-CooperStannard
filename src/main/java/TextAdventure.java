@@ -13,7 +13,7 @@ public class TextAdventure
         {
             // title
             System.out.println(
-                    "███████╗ ██████╗ ██████╗ ███████╗███████╗████████╗                           \n" +
+                            "███████╗ ██████╗ ██████╗ ███████╗███████╗████████╗                           \n" +
                             "██╔════╝██╔═══██╗██╔══██╗██╔════╝██╔════╝╚══██╔══╝                           \n" +
                             "█████╗  ██║   ██║██████╔╝█████╗  ███████╗   ██║                              \n" +
                             "██╔══╝  ██║   ██║██╔══██╗██╔══╝  ╚════██║   ██║                              \n" +
@@ -161,10 +161,10 @@ public class TextAdventure
 
                         // this if statement gets a cheat solution and random chance of failing
                         System.out.print("You start running away but there is a tree in the way you have to jump over (type jump): ");
-                        String cheat_Jump = sc.nextLine();
+                        String cheatJump = sc.nextLine();
                         int randInt = rand.nextInt(3);
 
-                        if (cheat_Jump.equalsIgnoreCase("jump") && randInt == 1 || cheat_Jump.equals("cheat")) {
+                        if (cheatJump.equalsIgnoreCase("jump") && randInt == 1 || cheatJump.equals("cheat")) {
                             System.out.println("you made the jump and continued running away from the wolf");
                         } else {
                             System.out.println("\nYou tripped and fell.");
@@ -379,7 +379,7 @@ public class TextAdventure
                                 System.out.println("\nYou rested at the house increasing your Hp");
                                 break;
                             case "3":
-                                if (coins <= 100) {
+                                if (coins < 99) {
                                     System.out.println("\nYou don't have enough coins to buy the key.");
                                 } else {
                                     System.out.print("\nDo you want to buy the key(Yes-Y No-N): ");
@@ -402,7 +402,21 @@ public class TextAdventure
                                 }
                                 break;
                             case "4":
+                                    if (!hasKey)
+                                    {
+                                        System.out.println("\nYou don't have the key to unlock the door.");
+                                    }else{
+                                        System.out.println("\nWhat is the way back to the door");
+                                        System.out.print("(you need to add the char value that you entered to get to the town from the door): ");
 
+                                        String guess = sc.nextLine();
+                                        String sValueWayBack = String.valueOf(valueWayBack);
+                                        if (guess.equals(sValueWayBack) || guess.equalsIgnoreCase("cheat")) {
+                                            runRun4 = false;
+                                        } else {
+                                            System.out.println("You don't remember the way back");
+                                        }
+                                    }
                                 break;
                             case "cheat":
                                 coins += 100;
@@ -437,6 +451,7 @@ public class TextAdventure
                             }
                         }
                     }
+                    System.out.println("\nYou have left the town to go unlock the door.");
 
 
                 }
