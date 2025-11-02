@@ -294,6 +294,8 @@ public class TextAdventure
                     boolean hasKey = false;
                     int coins = 0;
                     boolean runRun4 = true;
+                    boolean dead = false;
+
                     while (runRun4) {
                         System.out.println("\n----What to do in town----");
                         System.out.println("You have " + hp + " Hp and " + coins + " gold");
@@ -369,7 +371,35 @@ public class TextAdventure
                                     coins += coinUp;
                                     System.out.println("\nYour coins went up by " + coinUp + " coins");
                                 }
+                                if (hp <= 0)
+                                {
+                                    System.out.println("\nYou have died in the town");
+                                    System.out.print("Do you want to play again (Y or N): ");
 
+                                    boolean runRun7 = true;
+                                    while (runRun7)
+                                    {
+                                        String runAgain2 = sc.nextLine();
+
+                                        if (runAgain2.equalsIgnoreCase("N")) {
+                                            run = false;
+                                            runRun7 =false;
+                                            runRun4 = false;
+                                            dead = true;
+
+                                        }
+                                        else if (runAgain2.equalsIgnoreCase("Y"))
+                                        {
+                                            runRun7 = false;
+                                            runRun4 = false;
+                                            dead = true;
+                                        }
+                                        else
+                                        {
+                                            System.out.print("incorrect input type again: ");
+                                        }
+                                    }
+                                }
                                 break;
                             case "2":
                                 hp += 5;
@@ -424,36 +454,13 @@ public class TextAdventure
                                 break;
 
                         }
-                        if (hp <= 0)
-                        {
-                            System.out.println("\nYou have died in the town");
-                            System.out.print("Do you want to play again (Y or N): ");
 
-                            boolean runRun7 = true;
-                            while (runRun7)
-                            {
-                                String runAgain2 = sc.nextLine();
 
-                                if (runAgain2.equalsIgnoreCase("N")) {
-                                    run = false;
-                                    runRun7 =false;
-                                    runRun4 = false;
-                                }
-                                else if (runAgain2.equalsIgnoreCase("Y"))
-                                {
-                                    runRun7 = false;
-                                    runRun4 = false;
-                                }
-                                else
-                                {
-                                    System.out.print("incorrect input type again: ");
-                                }
-                            }
-                        }
                     }
-                    System.out.println("\nYou have left the town to go unlock the door.");
+                    if (!dead) {
+                        System.out.println("\nYou have left the town to go unlock the door.");
 
-
+                    }
                 }
             }
         }
