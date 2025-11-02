@@ -458,8 +458,162 @@ public class TextAdventure
 
                     }
                     if (!dead) {
+                        // scene 6 opening the door
                         System.out.println("\nYou have left the town to go unlock the door.");
+                        System.out.println("After remembering the way back you had little trouble getting back to the door.");
+                        System.out.println("As you put the key in the lock you amazingly hear the door unlock and it swing open.");
+                        System.out.println("You were discouraged a little when you saw a long hall way for as far as you could see.");
+                        System.out.println("You were also eager to find out what was at the end of it.");
+                        // scene 7 going down the hall and finding a monster
+                        System.out.println("You made yourself a torch and set off down the long hallway.");
+                        System.out.println("When you reach the end of the hall you were discouraged at finding another door.\n");
 
+                        System.out.println
+                                ("88888888888888888888888888888888888888888888888888888888888888888888888\n" +
+                                "88.._|      | `-.  | `.  -_-_ _-_  _-  _- -_ -  .'|   |.'|     |  _..88\n" +
+                                "88   `-.._  |    |`!  |`.  -_ -__ -_ _- _-_-  .'  |.;'   |   _.!-'|  88\n" +
+                                "88      | `-!._  |  `;!  ;. _______________ ,'| .-' |   _!.i'     |  88\n" +
+                                "88..__  |     |`-!._ | `.| |_______________||.\"'|  _!.;'   |     _|..88\n" +
+                                "88   |``\"..__ |    |`\";.| i|_|MMMMMMMMMMM|_|'| _!-|   |   _|..-|'    88\n" +
+                                "88   |      |``--..|_ | `;!|l|MMoMMMMoMMM|1|.'j   |_..!-'|     |     88\n" +
+                                "88   |      |    |   |`-,!_|_|MMMMP'YMMMM|_||.!-;'  |    |     |     88\n" +
+                                "88___|______|____!.,.!,.!,!|d|MMMo * loMM|p|,!,.!.,.!..__|_____|_____88\n" +
+                                "88      |     |    |  |  | |_|MMMMb,dMMMM|_|| |   |   |    |      |  88\n" +
+                                "88      |     |    |..!-;'i|r|MPYMoMMMMoM|r| |`-..|   |    |      |  88\n" +
+                                "88      |    _!.-j'  | _!,\"|_|M)(MMMMoMMM|_||!._|  `i-!.._ |      |  88\n" +
+                                "88     _!.-'|    | _.\"|  !;|1|MbdMMoMMMMM|l|`.| `-._|    |``-.._  |  88\n" +
+                                "88..-i'     |  _.''|  !-| !|_|MMMoMMMMoMM|_|.|`-. | ``._ |     |``\"..88\n" +
+                                "88   |      |.|    |.|  !| |u|MoMMMMoMMMM|n||`. |`!   | `\".    |     88\n" +
+                                "88   |  _.-'  |  .'  |.' |/|_|MMMMoMMMMoM|_|! |`!  `,.|    |-._|     88\n" +
+                                "88  _!\"'|     !.'|  .'| .'|[@]MMMMMMMMMMM[@] \\|  `. | `._  |   `-._  88\n" +
+                                "88-'    |   .'   |.|  |/| /                 \\|`.  |`!    |.|      |`-88\n" +
+                                "88      |_.'|   .' | .' |/                   \\  \\ |  `.  | `._    |  88\n" +
+                                "88     .'   | .'   |/|  /                     \\ |`!   |`.|    `.  |  88\n" +
+                                "88  _.'     !'|   .' | /                       \\|  `  |  `.    |`.|  88\n" +
+                                "88 vanishing point 888888888888888888888888888888888888888888888 fL 888");
+
+                        System.out.println("\nThat's when the way was shut off behind you and a monster formed in front of you");
+                        System.out.println("There was nowhere to run and it seemed keen on hurting you");
+                        System.out.println
+                                ("              /|                                           |\\\n" +
+                                "             /||             ^               ^             ||\\\n" +
+                                "            / \\\\__          //               \\\\          __// \\\n" +
+                                "           /  |_  \\         | \\   /     \\   / |         /  _|  \\\n" +
+                                "          /  /  \\  \\         \\  \\/ \\---/ \\/  /         /  /     \\\n" +
+                                "         /  /    |  \\         \\  \\/\\   /\\/  /         /  |       \\\n" +
+                                "        /  /     \\   \\__       \\ ( 0\\ /0 ) /       __/   /        \\\n" +
+                                "       /  /       \\     \\___    \\ \\_/|\\_/ /    ___/     /\\         \\\n" +
+                                "      /  /         \\_)      \\___ \\/-\\|/-\\/ ___/      (_/\\ \\      `  \\\n" +
+                                "     /  /           /\\__)       \\/  oVo  \\/       (__/   ` \\      `  \\\n" +
+                                "    /  /           /,   \\__)    (_/\\ _ /\\_)    (__/         `      \\  \\\n" +
+                                "   /  '           //       \\__)  (__V_V__)  (__/                    \\  \\\n" +
+                                "  /  '  '        /'           \\   |{___}|   /         .              \\  \\\n" +
+                                " /  '  /        /              \\/ |{___}| \\/\\          `              \\  \\\n" +
+                                "/     /        '       .        \\/{_____}\\/  \\          \\    `         \\  \\\n" +
+                                "     /                ,         /{_______}\\   \\          \\    \\         \\\n" +
+                                "                     /         /{___/_\\___}\\   `Adrian Elhart\n");
+                        boolean dead2 =true;
+                        if (isPacifist){
+                            // scene 8 how the monster responds to you (give you gold or attack you
+                            System.out.println("The monster starts to speak.");
+                            System.out.println("You have a virtuous heart, I have seen you not fight when it might have been easier to.");
+                            System.out.println("Because of this I will let you past the door and take some treasure.");
+                            System.out.println(
+                                    "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿\n" +
+                                    "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿\n" +
+                                    "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⢹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿\n" +
+                                    "⣿⣿⣿⣿⢿⣿⣿⣿⣿⣿⡏⠻⣿⣿⣿⣿⠏⠀⢸⣿⣿⣿⣿⢿⣿⣿⣿⣿⣿⣿\n" +
+                                    "⣿⣿⣿⣿⡀⠙⢿⣿⣿⣿⡇⠀⠈⢿⣿⠋⠀⠀⠸⣿⣿⠟⢡⣿⣿⣿⠿⢫⣿⣿\n" +
+                                    "⣿⣿⣿⣿⣧⠀⠀⠙⢿⣿⡇⠀⢀⣀⣁⣀⣀⡀⠀⠛⠁⢠⣿⠿⠋⠁⢀⣿⣿⣿\n" +
+                                    "⣿⣿⠙⢿⣿⣇⠀⠀⠀⠉⠀⢠⡟⠉⠉⠉⠉⢻⡄⠀⠀⠋⠀⠀⠀⠀⣾⣿⣿⣿\n" +
+                                    "⣿⣿⡆⠀⠈⠻⡄⠀⢀⣶⠶⠾⠷⢶⣶⣶⡶⠾⠷⠶⣶⡀⠀⠀⠀⣼⠟⠋⠁⣿\n" +
+                                    "⣿⣿⣧⠀⠀⢀⣀⣀⣼⣇⣀⣀⣀⣀⣿⣿⣀⣀⣀⣀⣸⣧⣀⣀⡈⠀⠀⠀⠀⣿\n" +
+                                    "⣿⠉⠋⠀⠀⣾⠋⠉⠉⠉⠙⣿⡟⠉⠉⠉⠉⢻⣿⠋⠉⠉⠉⠙⣷⠀⠀⠀⠀⣿\n" +
+                                    "⣿⠀⣼⠟⠛⠛⠛⢿⣿⡿⠛⠛⠛⠻⣿⣿⠟⠛⠛⠛⢿⣿⡿⠛⠛⠛⠻⣧⠀⣿\n" +
+                                    "⣿⣴⣿⣤⣤⣤⣤⣼⣿⣧⣤⣤⣤⣤⣿⣿⣤⣤⣤⣤⣼⣿⣧⣤⣤⣤⣤⣿⣦⣿\n" +
+                                    "⣿⠀⠀⠀⣿⣿⡁⠀⠀⠀⢈⣿⣏⠀⠀⠀⠀⣹⣿⡁⠀⠀⠀⢈⣿⣿⠀⠀⠀⣿\n" +
+                                    "⣿⣿⣿⠋⠉⠉⠉⢻⣿⡟⠉⠉⠉⠙⣿⣿⠋⠉⠉⠉⢻⣿⡟⠉⠉⠉⠙⣿⣿⣿\n" +
+                                    "⣿⣿⣿⣶⣶⣶⣶⣾⣿⣷⣶⣶⣶⣶⣿⣿⣶⣶⣶⣶⣾⣿⣷⣶⣶⣶⣶⣿⣿⣿");
+                            System.out.println("you have gained 5000 gold. You have " +(coins+5000) +" gold.");
+
+                        } else {
+                            System.out.println("You braced yourself up for a fight.");
+                            System.out.println("If you want to live you will need to be focused and lucky");
+                            int monsterHp = 50;
+                            hp = 25;
+                            System.out.println("\nDo you chose to block or attack the monster (if incorrect input you do nothing)");
+                            System.out.println("You gain 5 Hp each round through passive recovery and deal between 1-10 damage");
+                            System.out.println("The monster does 0-10 damage and increases by 1 each round, if you block it heals 10 hp.");
+                            for (int k=1; k>0; k += 1)
+                            {
+                                if (hp > 0 && monsterHp > 0) {
+                                    System.out.println("\nYour Hp is: " + hp + " The monster's is " + monsterHp);
+                                    System.out.print("Attack-A or Block-B: ");
+                                    String action = sc.nextLine();
+                                    if (action.equalsIgnoreCase("cheat")) {
+                                        monsterHp = 0;
+                                    } else if (action.equalsIgnoreCase("A")) {
+                                        int attack = rand.nextInt(10) + 1;
+                                        monsterHp -= attack;
+                                    } else if (action.equalsIgnoreCase("B")) {
+                                        hp += 10;
+                                    }
+                                    int damage = rand.nextInt(10) + k;
+                                    hp -= damage;
+                                    hp += 5;
+                                }else {
+                                    k =-1;
+                                }
+                            }
+                            if (hp <= 0) {
+                                System.out.println("\nYou have died fighting the monster");
+                                System.out.print("Do you want to play again (Y or N): ");
+
+                                boolean runRun8 = true;
+                                while (runRun8) {
+                                    String runAgain2 = sc.nextLine();
+
+                                    if (runAgain2.equalsIgnoreCase("N")) {
+                                        run = false;
+                                        runRun8 = false;
+                                        dead2 = false;
+                                    } else if (runAgain2.equalsIgnoreCase("Y")) {
+                                        runRun8 = false;
+                                        dead2 = false;
+
+                                    } else {
+                                        System.out.print("incorrect input type again: ");
+                                    }
+                                }
+                            } else {
+                                System.out.println("\nYou have slain the monster!");
+                                System.out.println("But you don't know how to open the door so this trip was a waste of time.");
+                            }
+                        }
+                        if (dead2) {
+                            System.out.println("\n" +
+                                            "████████╗██╗  ██╗███████╗    ███████╗███╗   ██╗██████╗ \n" +
+                                            "╚══██╔══╝██║  ██║██╔════╝    ██╔════╝████╗  ██║██╔══██╗\n" +
+                                            "   ██║   ███████║█████╗      █████╗  ██╔██╗ ██║██║  ██║\n" +
+                                            "   ██║   ██╔══██║██╔══╝      ██╔══╝  ██║╚██╗██║██║  ██║\n" +
+                                            "   ██║   ██║  ██║███████╗    ███████╗██║ ╚████║██████╔╝\n" +
+                                            "   ╚═╝   ╚═╝  ╚═╝╚══════╝    ╚══════╝╚═╝  ╚═══╝╚═════╝ \n");
+
+                            System.out.print("Do you want to play again (Yes-Y No-N): ");
+                            boolean runRun9 = true;
+                            while (runRun9) {
+                                String runAgain2 = sc.nextLine();
+
+                                if (runAgain2.equalsIgnoreCase("N")) {
+                                    run = false;
+                                    runRun9 = false;
+                                } else if (runAgain2.equalsIgnoreCase("Y")) {
+                                    runRun9 = false;
+                                } else {
+                                    System.out.print("incorrect input type again: ");
+                                }
+                            }
+                        }
                     }
                 }
             }
