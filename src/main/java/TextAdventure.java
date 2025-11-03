@@ -176,6 +176,7 @@ public class TextAdventure
                         System.out.println("\nDo you chose to block or attack the wolf (if incorrect input you do nothing)");
                         System.out.println("You gain 2 Hp each round through passive recovery and deal between 1-5 damage");
                         System.out.println("The wolf does 0-5 damage, if you block it heals 2 hp.");
+                        isPacifist =false;
 
                         while (hp > 0 && wolfhp > 0) {
                             System.out.println("\nYour Hp is: " + hp + " The wolf's is " + wolfhp);
