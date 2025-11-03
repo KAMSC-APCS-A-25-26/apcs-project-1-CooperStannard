@@ -29,7 +29,7 @@ public class TextAdventure
 
             // scene 1 getting out of the forest
             System.out.println("\nYour wake up in the middle of a forest with no memory of who you are or where you are.");
-            System.out.println("You decide to travel in a random direction until you reach something or you parish.");
+            System.out.println("You decide to travel in a random direction until you reach something or you perish.");
             System.out.println("You travel for a while until you find a path. The path branches multiple times so chose which direction to travel.");
             System.out.println("(left-L right-R straight-S)\n");
 
@@ -110,7 +110,7 @@ public class TextAdventure
                 System.out.println("You travel through the woods until you find a door in a cliff.");
                 System.out.println("The door is locked when you try to open it you see a key hole.");
                 System.out.println("You wonder what treasures you could be inside of the door.");
-                System.out.println("You realise that you cant do anything with the door for now so you decide to leave.");
+                System.out.println("You realise that you can't do anything with the door for now so you decide to leave.");
                 System.out.println("Maybe the next person you ask will know about the door.");
 
                 // scene 3 first fight
@@ -147,13 +147,13 @@ public class TextAdventure
                                 "                           ;  ");
 
                 System.out.println("\nYou see that a wolf is attacking you.");
-                System.out.println("You have a better change if you fight if off or you can run");
-                System.out.print("What will you do run or fight(Run-R, Fight-F): ");
+                System.out.println("You have a better chance if you fight if off or you can run");
+                System.out.print("What will you do run or fight (Run-R, Fight-F): ");
 
                 boolean runRun2 = true;
                 while (runRun2) {
-                    String fightORpacifist = sc.nextLine();
-                    if (fightORpacifist.equalsIgnoreCase("R")) {
+                    String fightOrPacifist = sc.nextLine();
+                    if (fightOrPacifist.equalsIgnoreCase("R")) {
                         isPacifist = true;
 
                         System.out.println("\nYou decide that killing the wolf is not the correct thing to do.");
@@ -165,13 +165,13 @@ public class TextAdventure
                         int randInt = rand.nextInt(3);
 
                         if (cheatJump.equalsIgnoreCase("jump") && randInt == 1 || cheatJump.equals("cheat")) {
-                            System.out.println("you made the jump and continued running away from the wolf");
+                            System.out.println("You made the jump and continued running away from the wolf.");
                         } else {
                             System.out.println("\nYou tripped and fell.");
                             hp = 0;
                         }
                         runRun2 = false;
-                    } else if (fightORpacifist.equalsIgnoreCase("F")) {
+                    } else if (fightOrPacifist.equalsIgnoreCase("F")) {
                         System.out.println("\nYou have decided to fight the wolf it is either him or me and I want to live.");
                         System.out.println("\nDo you chose to block or attack the wolf (if incorrect input you do nothing)");
                         System.out.println("You gain 2 Hp each round through passive recovery and deal between 1-5 damage");
@@ -201,11 +201,11 @@ public class TextAdventure
                     }
                 }
                 if (wolfhp <= 0) {
-                    System.out.println("You have killed the wolf");
+                    System.out.println("You have killed the wolf.");
                 }
                 if (hp <= 0)
                 {
-                    System.out.println("\nYou have died after the wolf ate you");
+                    System.out.println("\nYou have died after the wolf ate you.");
                     System.out.print("Do you want to play again (Y or N): ");
 
                     boolean runRun3 = true;
@@ -223,7 +223,7 @@ public class TextAdventure
                         }
                         else
                         {
-                            System.out.print("incorrect input type again: ");
+                            System.out.print("Incorrect input type again: ");
                         }
                     }
                 }
@@ -238,6 +238,7 @@ public class TextAdventure
                     System.out.println("The path branches multiple times so chose which direction to travel.");
                     System.out.println("You start to travel on the path. (left-L right-R straight-S)\n");
 
+                    // battle/minigame 1
                     int valueWayBack = 0;
                     for (int i = 4; i > 0; i--)
                     {
@@ -296,6 +297,7 @@ public class TextAdventure
                     boolean runRun4 = true;
                     boolean dead = false;
 
+                    // minigame 2 getting gold and avoiding mugger
                     while (runRun4) {
                         System.out.println("\n----What to do in town----");
                         System.out.println("You have " + hp + " Hp and " + coins + " gold");
@@ -396,7 +398,7 @@ public class TextAdventure
                                         }
                                         else
                                         {
-                                            System.out.print("incorrect input type again: ");
+                                            System.out.print("Incorrect input type again: ");
                                         }
                                     }
                                 }
@@ -537,11 +539,12 @@ public class TextAdventure
                             System.out.println("you have gained 5000 gold. You have " +(coins+5000) +" gold.");
 
                         } else {
+                            // minigame 3 fighting monster
                             System.out.println("You braced yourself up for a fight.");
-                            System.out.println("If you want to live you will need to be focused and lucky");
+                            System.out.println("If you want to live you will need to be focused and lucky.");
                             int monsterHp = 50;
                             hp = 25;
-                            System.out.println("\nDo you chose to block or attack the monster (if incorrect input you do nothing)");
+                            System.out.println("\nDo you chose to block or attack the monster. (if incorrect input you do nothing)");
                             System.out.println("You gain 5 Hp each round through passive recovery and deal between 1-10 damage");
                             System.out.println("The monster does 0-10 damage and increases by 1 each round, if you block it heals 10 hp.");
                             for (int k=1; k>0; k += 1)
@@ -566,7 +569,7 @@ public class TextAdventure
                                 }
                             }
                             if (hp <= 0) {
-                                System.out.println("\nYou have died fighting the monster");
+                                System.out.println("\nYou have died fighting the monster.");
                                 System.out.print("Do you want to play again (Y or N): ");
 
                                 boolean runRun8 = true;
@@ -610,7 +613,7 @@ public class TextAdventure
                                 } else if (runAgain2.equalsIgnoreCase("Y")) {
                                     runRun9 = false;
                                 } else {
-                                    System.out.print("incorrect input type again: ");
+                                    System.out.print("Incorrect input type again: ");
                                 }
                             }
                         }
