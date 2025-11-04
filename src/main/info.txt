@@ -1,0 +1,20 @@
+in scene 1 you wake up in the middle of the forest, you can follow the path to either get the secret ending
+(go left three times) or approach a door in a cliff.
+
+in scene 2 you find a door in the cliff after traveling from the spot you woke up.
+
+in scene 3 you have your first fight where you can choose to run away to be a pacifist or fight. at any point in the
+fight or when you jump over the branch you can type "cheat" to skip the randomness.
+
+in scene 4 you travel from the door to a village (to find your way back to the door in a later scene remember the total
+char value that you put down there)
+
+in scene 5 you learn about the key to unlock the door and play a minigame to get gold ( you can type "cheat" in the
+switch case to gain 100 gold or cheat while fighting the mugger to set their health to 0)
+
+in scene 6 you find your way back to the door with the char value from earlier and you open the door
+
+in scene 7 you go down the hall and find a monster
+
+in scene 8 the monster rewards your behavior with some treasure or fights you.
+

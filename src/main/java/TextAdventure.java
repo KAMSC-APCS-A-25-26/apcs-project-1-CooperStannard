@@ -461,7 +461,7 @@ public class TextAdventure
 
                     }
                     if (!dead) {
-                        // scene 6 opening the door
+                        // scene 6 opening the door and finding way back with earlier code in switch case
                         System.out.println("\nYou have left the town to go unlock the door.");
                         System.out.println("After remembering the way back you had little trouble getting back to the door.");
                         System.out.println("As you put the key in the lock you amazingly hear the door unlock and it swing open.");
